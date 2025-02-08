@@ -1,5 +1,5 @@
 # Importing functions from general_plots
-from .general_plots import (
+from src.visualisations.general_plots import (
     plot_price_comparison,
     plot_volatility_sensitivity,
     plot_time_to_expiration_sensitivity,
@@ -9,7 +9,7 @@ from .general_plots import (
 )
 
 # Importing functions from greeks_plots
-from .greeks_plots import (
+from src.visualisations.greeks_plots import (
     plot_first_order_greek,
     plot_second_order_greek,
     create_volatility_surface,
