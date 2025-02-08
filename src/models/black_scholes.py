@@ -1,23 +1,15 @@
 import numpy as np
 from scipy.stats import norm
-from utils.user_input import UserInput
+from src.utils.user_input import UserInput
 
 def black_scholes(option_type, S, K, T, r, sigma, q=0):
-    """
-    Calculate the Black-Scholes option price.
     
-    Parameters:
-    - option_type: 'Call' or 'Put'
-    - S: Underlying asset price
-    - K: Strike price
-    - T: Time to expiration (in years)
-    - r: Risk-free interest rate (as a decimal)
-    - sigma: Volatility (as a decimal)
-    - q: Dividend yield (as a decimal, default is 0)
-    
-    Returns:
-    - Option price
-    """
+    # Input validation
+    if S <= 0 or K <= 0 or T <= 0:
+        raise ValueError("S, K, and T must be greater than zero.")
+    if sigma < 0:
+        raise ValueError("Volatility (sigma) must be non-negative.")
+
     # Calculate d1 and d2
     d1 = (np.log(S / K) + (r - q + 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))
     d2 = d1 - sigma * np.sqrt(T)
@@ -32,9 +24,10 @@ def black_scholes(option_type, S, K, T, r, sigma, q=0):
     return price
 
 def calculate_black_scholes():
+    
     # Create an instance of UserInput to gather parameters
     user_input = UserInput()
-    user_input.gather_input()
+    user_input.gather_input(prefix="black_scholes_")
     parameters = user_input.get_parameters()
 
     # Extract parameters
@@ -48,6 +41,4 @@ def calculate_black_scholes():
 
     # Calculate option price using the Black-Scholes formula
     option_price = black_scholes(option_type, underlying_price, strike_price, time_to_expiration, risk_free_rate, volatility, dividend_yield)
-
-    # Display results
-    print(f"{option_type} Option Price: {option_price}")
+    return option_price
