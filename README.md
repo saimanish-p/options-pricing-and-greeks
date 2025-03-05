@@ -128,5 +128,5 @@ below if you can't stand my voice!
 
 *** Video Tutorial - Coming soon ***
 
-### Step-by-Step image walkthorugh of project
+### Step-by-Step image walkthrough of project
 
