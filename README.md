@@ -10,7 +10,7 @@ Email: saimanishprabhakar2020@gmail.com
 
 ### Key Features
 
-#### Customizable Option Parameters
+#### Customisable Option Parameters
 Users can dynamically input and adjust:
 - Option Type (Call/Put)
 - Underlying Asset Price
@@ -21,7 +21,8 @@ Users can dynamically input and adjust:
 - Dividend Yield
 - Monte Carlo Simulation Count
 
-#### Visualization and Analysis
+#### Visualisation and Analysis
+
 1. **Options Pricing Insights**
    - Detailed visual analysis of option prices
    - Sensitivity visualizations for:
@@ -30,6 +31,7 @@ Users can dynamically input and adjust:
      - Strike Price
 
 2. **Monte Carlo Simulation**
+
    - **Visual Path Simulation**: 
      - Configurable display of 1-50 sample price paths (limited for visualisation purposes)
      - Interactive graph showing possible price evolution scenarios
@@ -40,21 +42,9 @@ Users can dynamically input and adjust:
      - Histogram showing distribution of final prices across all simulation paths
      - Statistical summary of simulation results
 
-3. **Comprehensive Greeks Analysis**
-   - First-Order Greeks:
-     - Delta
-     - Gamma
-     - Theta
-     - Vega
-     - Rho
-
-   - Second-Order Greeks:
-     - Charm
-     - Speed
-     - Color
-     - Zomma
-     - Veta
-     - Volga
+4. **Comprehensive Greeks Analysis**
+   - First-Order Greeks: Delta, Gamma, Theta, Vega, Rho
+   - Second-Order Greeks: Charm, Speed, Color, Zomma, Veta, Volga
 
 #### Comparative Visualization
 - Bar charts include a 'Difference %' metric
@@ -62,6 +52,7 @@ Users can dynamically input and adjust:
 - Provides insight into model accuracy and deviation
 
 #### Multi-Dimensional Sensitivity Plots
+
 Based on Black-Scholes Greeks:
 - Delta Surface: (Greek, Volatility, Stock Price)
 - Gamma Surface: (Greek, Volatility, Stock Price)
@@ -127,6 +118,10 @@ out of it. Alternatively, you can read the written step-by-step walkthrough of t
 below if you can't stand my voice!
 
 *** Video Tutorial - Coming soon ***
+
+### Step-by-Step image walkthrough of project
+
+
 
 ### Step-by-Step image walkthrough of project
 
