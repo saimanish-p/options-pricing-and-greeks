@@ -121,7 +121,3 @@ below if you can't stand my voice!
 
 ### Step-by-Step image walkthrough of project
 
-
-
-### Step-by-Step image walkthrough of project
-
