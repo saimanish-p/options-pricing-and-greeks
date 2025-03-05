@@ -11,24 +11,13 @@ Email: saimanishprabhakar2020@gmail.com
 ### Key Features
 
 #### Customisable Option Parameters
-Users can dynamically input and adjust:
-- Option Type (Call/Put)
-- Underlying Asset Price
-- Strike Price
-- Time to Expiration
-- Risk-Free Interest Rate
-- Volatility
-- Dividend Yield
-- Monte Carlo Simulation Count
+Users can dynamically input and adjust: Option Type (Call/Put), Underlying Asset Price, Strike Price, Time to Expiration, Risk-Free Interest Rate, Volatility, Dividend Yield, and Monte Carlo Simulation Count
 
 #### Visualisation and Analysis
 
 1. **Options Pricing Insights**
-   - Detailed visual analysis of option prices
-   - Sensitivity visualizations for:
-     - Volatility
-     - Time to Expiration
-     - Strike Price
+   - Visual analysis of option prices
+   - Sensitivity visualisations for: Volatility, Time to Expiration, Strike Price
 
 2. **Monte Carlo Simulation**
 
