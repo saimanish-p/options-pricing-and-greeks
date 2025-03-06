@@ -22,10 +22,10 @@ Assumption: The underlying asset price follows geometric Brownian motion with co
 
 Implications:
 
-1. Returns are assumed to be log-normally distributed
-2. Volatility is constant across all price levels and time periods
-3. No sudden jumps in asset prices are possible
-4. The model cannot capture volatility clustering or fat-tailed distributions observed in real markets
+- Returns are assumed to be log-normally distributed
+- Volatility is constant across all price levels and time periods
+- No sudden jumps in asset prices are possible
+- The model cannot capture volatility clustering or fat-tailed distributions observed in real markets
 
 2. **Risk-Neutral Valuation Framework**
 
@@ -44,10 +44,10 @@ Assumption: Markets are complete and arbitrage-free, allowing risk-neutral valua
 
 Implications:
 
-1. All assets can be perfectly hedged
-2. Risk preferences don't affect option prices
-3. The risk-free rate is constant over the option's life
-4. Continuous hedging is possible without transaction costs
+- All assets can be perfectly hedged
+- Risk preferences don't affect option prices
+- The risk-free rate is constant over the option's life
+- Continuous hedging is possible without transaction costs
 
 3. **Constant Interest Rates and Dividend Yields**
 
@@ -60,9 +60,9 @@ Assumption: Interest rates and dividend yields remain constant throughout the op
 
 Implications:
 
-1. Cannot model options on assets with time-varying dividend schedules
-2. Does not account for term structure of interest rates
-3. Unsuitable for long-term options where rates are likely to change
+- Cannot model options on assets with time-varying dividend schedules
+- Does not account for term structure of interest rates
+- Unsuitable for long-term options where rates are likely to change
 
 4. **European Exercise Style Only**
 
@@ -79,9 +79,9 @@ Assumption: Options can only be exercised at expiration (European style)
 
 Implications:
 
-1. Cannot price American options that allow early exercise
-2. May undervalue options on high-dividend stocks where early exercise might be optimal
-3. Not applicable to Bermudan options with specific exercise dates
+- Cannot price American options that allow early exercise
+- May undervalue options on high-dividend stocks where early exercise might be optimal
+- Not applicable to Bermudan options with specific exercise dates
 
 5. **Perfect Liquidity and No Transaction Costs**
 
@@ -89,9 +89,9 @@ Assumption: Markets are perfectly liquid with no transaction costs, taxes, or bi
 
 Implications:
 
-1. No modeling of liquidity risk premiums
-2. Cannot account for the impact of transaction costs on hedging strategies
-3. May overvalue options in illiquid markets
+- No modeling of liquidity risk premiums
+- Cannot account for the impact of transaction costs on hedging strategies
+- May overvalue options in illiquid markets
 
 6. **Normally Distributed Random Variables for Simulation**
 
@@ -106,9 +106,9 @@ Assumption: Stock price movements can be accurately modeled using normally distr
 
 Implications:
 
-1. Cannot capture fat-tailed distributions observed in real market returns
-2. May underestimate the probability of extreme market movements
-3. Doesn't account for skewness in return distributions
+- Cannot capture fat-tailed distributions observed in real market returns
+- May underestimate the probability of extreme market movements
+- Doesn't account for skewness in return distributions
 
 7. **Continuous Differentiability for Greeks Calculation**
 
@@ -124,9 +124,9 @@ Assumption: The option price function is smooth and continuously differentiable 
 
 Implications:
 
-1. Greeks calculations may be inaccurate near discontinuities (e.g., at the strike price for digital options)
-2. Second-order Greeks especially may be unstable for certain parameter combinations
-3. Finite difference approximations assume local linearity that may not hold in practice
+- Greeks calculations may be inaccurate near discontinuities (e.g., at the strike price for digital options)
+- Second-order Greeks especially may be unstable for certain parameter combinations
+- Finite difference approximations assume local linearity that may not hold in practice
 
 8. **No Counterparty Risk**
 
@@ -134,9 +134,9 @@ Assumption: There is no risk of default by any counterparty.
 
 Implications:
 
-1. Cannot model credit value adjustments (CVA)
-2. May overvalue options in markets with significant counterparty risk
-3. Not suitable for credit-sensitive derivatives
+- Cannot model credit value adjustments (CVA)
+- May overvalue options in markets with significant counterparty risk
+- Not suitable for credit-sensitive derivatives
 
 9. **Market Parameters Are Known with Certainty**
 
@@ -149,9 +149,9 @@ Assumption: All input parameters (especially volatility) are known with certaint
 
 Implications:
 
-1. Does not account for parameter uncertainty
-2. Cannot model volatility risk premium
-3. Assumes perfect calibration to market data
+- Does not account for parameter uncertainty
+- annot model volatility risk premium
+- Assumes perfect calibration to market data
 
 10. **Daily Time Steps Are Sufficient for Accuracy**
 
@@ -165,9 +165,9 @@ Assumption: Daily time steps provide sufficient granularity for accurate simulat
 
 Implications:
 
-1. May not capture intraday price movements that could be relevant for short-term options
-2. Fixed time step approach may be inefficient for certain option types
-3. Could miss critical price paths in path-dependent options
+- May not capture intraday price movements that could be relevant for short-term options
+- Fixed time step approach may be inefficient for certain option types
+- Could miss critical price paths in path-dependent options
 
 ## Technical Limitations
 
