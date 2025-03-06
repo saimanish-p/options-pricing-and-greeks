@@ -168,7 +168,8 @@ which also guides you on interpretation of certain plots such as the -
 
 ## Future Improvements
 
-
+- American Option Support: Implement early exercise capability using Least Squares Monte Carlo or binomial tree methods.
+- Stochastic Volatility Models: Implement Heston, SABR, or local volatility models to better capture volatility smile/skew.
 
 ## Contributing
 
