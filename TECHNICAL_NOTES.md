@@ -564,25 +564,25 @@ Relevant code blocks are included for additional context and clarity.
 
 **Note on the Monte Carlo options price value in the sensitivity plots (vol, time to expiry, strike price)**
 
-    For those who might be asking, "why does the MC model provide a different options price everytime I use the 
-    same parameters?"
+For those who might be asking, "why does the MC model provide a different options price everytime I use the 
+same parameters?"
+
+- Inherent Characteristics:
+    * Stochastic (random) pricing model
+    * Uses pseudo-random number generation
+    * Approximation method, not an exact calculation
+    * Pricing is statistical estimate, not deterministic value
     
-      Inherent Characteristics:
-        - Stochastic (random) pricing model
-        - Uses pseudo-random number generation
-        - Approximation method, not an exact calculation
-        - Pricing is statistical estimate, not deterministic value
+- Why Variations Occur:
+    * Random walk simulations
+    * Probabilistic nature of financial modeling
+    * Finite number of price path simulations
+    * Computational approximation of complex financial dynamics
     
-      Why Variations Occur:
-        - Random walk simulations
-        - Probabilistic nature of financial modeling
-        - Finite number of price path simulations
-        - Computational approximation of complex financial dynamics
-    
-      Key Insight:
-        - Small price differences are expected and normal
-        - Reflects the probabilistic nature of financial markets
-        - Demonstrates model's ability to capture market uncertainty
+- Key Insight:
+    * Small price differences are expected and normal
+    * Reflects the probabilistic nature of financial markets
+    * Demonstrates model's ability to capture market uncertainty
 
 ## Bonus: What factors contributed towards the accuracy of options pricing for MC models in this project?
 
