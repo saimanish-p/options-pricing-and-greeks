@@ -156,11 +156,11 @@ For demonstration purposes, only the Delta sensitivity surface is displayed in t
 
 ![Multi-Dimensional Sensitivity Plot - Delta](images/BS_Multi-Dimensional_Sensitivity_Delta_Plot.png)
 
-## FAQ, Assumptions, and Limitations
+## FAQ, Assumptions, Limitations, and Development Challenges
 
 This implementation represents one of several possible approaches to options pricing modeling, necessitating specific technical decisions and architectural trade-offs. 
 
-For transparency and educational purposes, I have documented all underlying assumptions, computational limitations, and development challenges in the comprehensive [TECHNICAL_NOTES.md](TECHNICAL_NOTES.md) file
+For transparency and educational purposes, I have documented all underlying assumptions, limitations, and development challenges in the comprehensive [TECHNICAL_NOTES.md](TECHNICAL_NOTES.md) file
 which also guides you on interpretation of certain plots such as the - 
 
 - Multi-Dimensional Sensitivity Greeks Plots
@@ -204,6 +204,7 @@ which also guides you on interpretation of certain plots such as the -
    - Shows sensitivity to interest rate changes
    - Used for: Interest rate risk management, rarely primary concern
 
+
 **Second-Order Greeks**
 
    Charm: Rate of change of Delta with respect to time
@@ -235,6 +236,92 @@ which also guides you on interpretation of certain plots such as the -
    - Second derivative (∂²V/∂σ²)
    - Also known as Vega convexity
    - Used for: Advanced volatility trading strategies
+
+## Mathematics of Black-Scholes and Monte Carlo models
+
+**Black-Scholes Model**
+
+   The Black-Scholes partial differential equation that option prices must satisfy:
+   
+   $$\frac{\partial V}{\partial t} + \frac{1}{2}\sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} + rS\frac{\partial 
+   V}{\partial S} - rV = 0$$
+
+   Where:
+   - $$V$$ is the option price
+   - $$S$$ is the underlying asset price
+   - $$t$$ is time
+   - $$\sigma$$ is volatility
+   - $$r$$ is the risk-free interest rate
+
+   **Closed-Form Solution**
+
+   **For a European call option:**
+   
+   $$C(S, t) = S \cdot e^{-q(T-t)} \cdot N(d_1) - K \cdot e^{-r(T-t)} \cdot N(d_2)$$
+
+   **For a European put option:**
+   
+   $$P(S, t) = K \cdot e^{-r(T-t)} \cdot N(-d_2) - S \cdot e^{-q(T-t)} \cdot N(-d_1)$$
+
+   Where:
+   - $$d_1 = \frac{\ln(S/K) + (r - q + \sigma^2/2)(T-t)}{\sigma\sqrt{T-t}}$$
+   - $$d_2 = d_1 - \sigma\sqrt{T-t}$$
+   
+   And:
+   - $$N(x)$$ is the cumulative distribution function of the standard normal distribution
+   - $$K$$ is the strike price
+   - $$T$$ is the expiration time
+   - $$q$$ is the dividend yield
+
+**Monte Carlo Simulation**
+
+   Monte Carlo methods rely on the risk-neutral valuation principle, which states that the option price is the 
+   expected payoff discounted at the risk-free rate:
+   
+   $$V_0 = e^{-rT} \mathbb{E}^Q[V_T]$$
+   
+   Where:
+   - $$V_0$$ is the current option price
+   - $$V_T$$ is the option payoff at expiration
+   - $$\mathbb{E}^Q$$ is the expectation under the risk-neutral measure
+
+   **Geometric Brownian Motion**
+   
+   Under the risk-neutral measure, the underlying asset price follows:
+   
+   $$dS_t = (r - q)S_t dt + \sigma S_t dW_t$$
+   
+   Where:
+   - $$dW_t$$ is a Wiener process (standard Brownian motion)
+
+   **Discretization**
+
+   For simulation, we discretize the continuous process:
+   
+   $$S_{t+\Delta t} = S_t \exp\left((r - q - \frac{\sigma^2}{2})\Delta t + \sigma \sqrt{\Delta t} \cdot Z\right)$$
+   
+   Where:
+   - $$Z \sim N(0,1)$$ is a standard normal random variable
+   - $$\Delta t$$ is the time step
+
+   **Monte Carlo Estimator**
+
+   The option price is estimated as:
+   
+   $$V_0 \approx e^{-rT} \frac{1}{N} \sum_{i=1}^{N} V_T^{(i)}$$
+
+   Where:
+   - $$N$$ is the number of simulations
+   - $$V_T^{(i)}$$ is the payoff from the $$i$$-th simulation
+
+   **Error Estimation**
+   
+   The standard error of the Monte Carlo estimate is:
+   
+   $$SE = \frac{\sigma_{MC}}{\sqrt{N}}$$
+
+   Where:
+   - $$\sigma_{MC}$$ is the standard deviation of the simulated payoffs
 
 ## Contributing
 
