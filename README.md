@@ -160,7 +160,7 @@ For demonstration purposes, only the Delta sensitivity surface is displayed in t
 
 This implementation represents one of several possible approaches to options pricing modeling, necessitating specific technical decisions and architectural trade-offs. 
 
-For transparency and educational purposes, I have documented all underlying assumptions, computational limitations, and development challenges in the comprehensive TECHNICAL_NOTES.md file, available in the repository's main branch alongside this README. 
+For transparency and educational purposes, I have documented all underlying assumptions, computational limitations, and development challenges in the comprehensive [TECHNICAL_NOTES.md](TECHNICAL_NOTES.md) file.
 
 ## Future Improvements
 
