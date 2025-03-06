@@ -110,3 +110,68 @@ below if you can't stand my voice!
 
 ### Step-by-Step image walkthrough of project
 
+Adjust the default values of the parameters listed in the sidebar to your liking. 
+
+![User Inputs](images/User_Input_Parameters.png)
+
+If you're unsure about any parameter, hover over the question mark symbol for additional context.
+
+![User Input - Help Functionality](images/Help_Functionality_User_Inputs.png)
+
+As you adjust inputs, all visualisations update in real-time, comparing Black-Scholes and Monte Carlo pricing for both Call and Put options. The comparison graph shows pricing differences with a percentage deviation metric.
+
+![Options Price Comparison](images/Example_Options_Price_Comparison_Graph.png)
+
+The next section demonstrates how options prices respond to changes in key factors:
+
+![Options Price - Volatility Sensitivity](images/Example_Volatility_Sensitivity_Options_Price_graph.png)
+
+![Options Price - Time to Expiration Sensitivity](images/Example_TimetoExpiration_Options_Price_graph.png)
+
+![Options Price - Strike Price Sensitivity](images/Example_StrikePriceSensitivity_Options_Price_graph.png)
+
+The interactive Monte Carlo simulation graph allows you to visualize between 1-50 sample price paths using the slider and 'Generate New Paths' button. Note that this is for visualisation only and differs from the calculation model.
+
+![Monte Carlo Option Price Path](images/Example_Monte_Carlo_Price_Sim_Paths_graph.png)
+
+A histogram displays the distribution of option prices from 10,000 Monte Carlo simulations (default), along with key statistics.
+
+![Monte Carlo Options Price Path Histogram](images/Example_Monte_Carlo_Price_Distribution_graph.png)
+
+Beyond pricing, the application analyses option Greeks (both first and second order) through tabular presentation:
+
+![Greeks Analysis Table](images/Example_Greeks_Analysis_Tables.png)
+
+These Greeks are also visualised graphically using the same comparative format as the pricing charts. Below are examples of first and second-order Greek analyses:
+
+![First Order Greek Analysis - Delta](images/Example_FirstOrderGreeks_Delta_graph.png)
+
+![Second Order Greek Analysis - Volga](images/Example_SecondOrderGreeks_Volga_graph.png)
+
+Finally, the application features interactive 3D sensitivity plots based on Black-Scholes Greeks. These plots show relationships between each Greek, relevant parameters (such as volatility, time-to-expiration, or risk-free rate), and stock price. 
+
+We use "multi-dimensional sensitivity plots" terminology since different Greeks are primarily influenced by different parameters. A dropdown menu lets you explore various Greeks with full interactive controls for panning, zooming, and rotation.
+
+For demonstration purposes, only the Delta sensitivity surface is displayed in this documentation.
+
+![Multi-Dimensional Sensitivity Plot - Delta](images/BS_Multi-Dimensional_Sensitivity_Delta_Plot.png)
+
+## Assumptions and Limitations
+
+This implementation represents one of several possible approaches to options pricing modeling, necessitating specific technical decisions and architectural trade-offs. 
+
+For transparency and educational purposes, I have documented all underlying assumptions, computational limitations, and development challenges in the comprehensive TECHNICAL_NOTES.md file, available in the repository's main branch alongside this README. 
+
+## Future Improvements
+
+
+
+## Contributing
+
+I hope you find some value from this project, and wish that it serves you well in your journey towards mastering options.
+
+If you would like to contribute to the development of the options pricing and greeks analysis project, please:
+
+1. Feel free to clone the repository to your local machine (follow the steps in the 'Getting Started' section)
+2. Make your contribution, and then submit a pull request.
+3. Use the discussions tab within the repository and raise issues if needed.
