@@ -171,6 +171,71 @@ which also guides you on interpretation of certain plots such as the -
 - American Option Support: Implement early exercise capability using Least Squares Monte Carlo or binomial tree methods.
 - Stochastic Volatility Models: Implement Heston, SABR, or local volatility models to better capture volatility smile/skew.
 
+## Greeks 101
+
+**First-Order Greeks**
+
+   Delta (Δ): Measures rate of change in option price with respect to underlying price
+   - First derivative of option price with respect to spot price (∂V/∂S)
+   - Represents hedge ratio (number of shares needed to hedge option)
+   - Range: 0 to 1 for calls, -1 to 0 for puts
+   - Used for: Directional risk management, basic hedging strategies
+   
+   Gamma (Γ): Measures rate of change in Delta with respect to underlying price
+   - Second derivative of option price with respect to spot price (∂²V/∂S²)
+   - Shows how much Delta changes for a $1 move in underlying
+   - Always positive for both calls and puts
+   - Used for: Dynamic hedging, risk assessment of large price moves
+   
+   Theta (Θ): Measures rate of change in option price with respect to time
+   - First derivative of option price with respect to time (-∂V/∂t)
+   - Represents time decay of option value
+   - Usually negative (options lose value over time)
+   - Used for: Time decay management, premium selling strategies
+   
+   Vega (ν): Measures rate of change in option price with respect to volatility
+   - First derivative of option price with respect to volatility (∂V/∂σ)
+   - Shows sensitivity to volatility changes
+   - Always positive for vanilla options
+   - Used for: Volatility risk management, volatility trading
+   
+   Rho (ρ): Measures rate of change in option price with respect to interest rate
+   - First derivative of option price with respect to interest rate (∂V/∂r)
+   - Shows sensitivity to interest rate changes
+   - Used for: Interest rate risk management, rarely primary concern
+
+**Second-Order Greeks**
+
+   Charm: Rate of change of Delta with respect to time
+   - Mixed derivative (∂²V/∂S∂t)
+   - Shows how Delta changes as time passes
+   - Used for: Maintaining Delta-hedges over time
+   
+   Speed: Rate of change of Gamma with respect to underlying price
+   - Third derivative of option price (∂³V/∂S³)
+   - Shows how Gamma changes with large price moves
+   - Used for: Risk management of large market moves
+   
+   Color: Rate of change of Gamma with respect to time
+   - Mixed derivative (∂²V/∂S²∂t)
+   - Shows how Gamma changes as time passes
+   - Used for: Gamma trading strategies over time
+   
+   Zomma: Rate of change of Gamma with respect to volatility
+   - Mixed derivative (∂³V/∂S²∂σ)
+   - Shows how Gamma changes with volatility
+   - Used for: Volatility risk in Gamma trading
+   
+   Veta: Rate of change of Vega with respect to time
+   - Mixed derivative (∂²V/∂σ∂t)
+   - Shows how volatility sensitivity changes over time
+   - Used for: Long-term volatility trading
+   
+   Volga: Rate of change of Vega with respect to volatility
+   - Second derivative (∂²V/∂σ²)
+   - Also known as Vega convexity
+   - Used for: Advanced volatility trading strategies
+
 ## Contributing
 
 I hope you find some value from this project, and wish that it serves you well in your journey towards mastering options.
