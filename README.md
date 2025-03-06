@@ -156,11 +156,15 @@ For demonstration purposes, only the Delta sensitivity surface is displayed in t
 
 ![Multi-Dimensional Sensitivity Plot - Delta](images/BS_Multi-Dimensional_Sensitivity_Delta_Plot.png)
 
-## Assumptions and Limitations
+## FAQ, Assumptions, and Limitations
 
 This implementation represents one of several possible approaches to options pricing modeling, necessitating specific technical decisions and architectural trade-offs. 
 
-For transparency and educational purposes, I have documented all underlying assumptions, computational limitations, and development challenges in the comprehensive [TECHNICAL_NOTES.md](TECHNICAL_NOTES.md) file.
+For transparency and educational purposes, I have documented all underlying assumptions, computational limitations, and development challenges in the comprehensive [TECHNICAL_NOTES.md](TECHNICAL_NOTES.md) file
+which also guides you on interpretation of certain plots such as the - 
+
+- Multi-Dimensional Sensitivity Greeks Plots
+- Monte Carlo Options Price Paths
 
 ## Future Improvements
 
