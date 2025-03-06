@@ -273,6 +273,8 @@ which also guides you on interpretation of certain plots such as the -
    - $$T$$ is the expiration time
    - $$q$$ is the dividend yield
 
+
+
 **Monte Carlo Simulation**
 
    Monte Carlo methods rely on the risk-neutral valuation principle, which states that the option price is the 
